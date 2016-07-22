@@ -38,6 +38,7 @@
     <object>objects\objMeta</object>
     <object>objects\objPlay</object>
     <object>objects\objExit</object>
+    <object>objects\objDiamante_2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\inicio</room>

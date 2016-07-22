@@ -567,6 +567,8 @@
     <instance objName="objPersonaje" x="32" y="32" name="inst_CF8A46BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMeta" x="864" y="864" name="inst_EBA192AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEnemy1" x="256" y="288" name="inst_FD7C8F91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPuerta" x="832" y="896" name="inst_6727E284" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDiamante_2" x="704" y="896" name="inst_B5EC8A9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
