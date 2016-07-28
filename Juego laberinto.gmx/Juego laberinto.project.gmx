@@ -21,6 +21,14 @@
     <sprite>sprites\sprMeta</sprite>
     <sprite>sprites\sprPlay</sprite>
     <sprite>sprites\sprExit</sprite>
+    <sprites name="sprsLife">
+      <sprite>sprites\sprLife_1</sprite>
+      <sprite>sprites\sprLife_2</sprite>
+      <sprite>sprites\sprLife_3</sprite>
+      <sprite>sprites\sprLife_4</sprite>
+      <sprite>sprites\sprLife_5</sprite>
+      <sprite>sprites\sprLife_0</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -39,6 +47,8 @@
     <object>objects\objPlay</object>
     <object>objects\objExit</object>
     <object>objects\objDiamante_2</object>
+    <object>objects\objLifes</object>
+    <object>objects\objInicio</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\inicio</room>
@@ -46,6 +56,7 @@
     <room>rooms\Nivel_2</room>
     <room>rooms\Nivel_3</room>
     <room>rooms\Fin</room>
+    <room>rooms\Game_Over</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
