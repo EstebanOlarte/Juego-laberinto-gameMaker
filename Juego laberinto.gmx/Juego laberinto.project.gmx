@@ -9,6 +9,7 @@
     <sound>sound\soundDiamante</sound>
     <sound>sound\soundPuerta</sound>
     <sound>sound\soundMeta</sound>
+    <sound>sound\Musica</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprMuro</sprite>
@@ -33,6 +34,9 @@
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -49,6 +53,7 @@
     <object>objects\objDiamante_2</object>
     <object>objects\objLifes</object>
     <object>objects\objInicio</object>
+    <object>objects\objMusica</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\inicio</room>
