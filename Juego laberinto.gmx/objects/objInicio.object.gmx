@@ -28,6 +28,7 @@
             <string>if (keyboard_check_pressed(vk_anykey))
     {
     room_goto(inicio)
+    audio_stop_sound(Musica)
     }
 </string>
           </argument>

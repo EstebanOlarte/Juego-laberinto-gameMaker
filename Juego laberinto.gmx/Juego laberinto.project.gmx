@@ -30,6 +30,7 @@
       <sprite>sprites\sprLife_5</sprite>
       <sprite>sprites\sprLife_0</sprite>
     </sprites>
+    <sprite>sprites\sprLinea</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -37,8 +38,11 @@
     <background>background\background2</background>
     <background>background\background3</background>
     <background>background\background4</background>
+    <background>background\background5</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\camino_nivel_3</path>
+  </paths>
   <objects name="objects">
     <object>objects\objPersonaje</object>
     <object>objects\objMuro</object>
@@ -54,12 +58,15 @@
     <object>objects\objLifes</object>
     <object>objects\objInicio</object>
     <object>objects\objMusica</object>
+    <object>objects\objEnemyLevel3</object>
+    <object>objects\objLinea</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\inicio</room>
     <room>rooms\Nivel_1</room>
     <room>rooms\Nivel_2</room>
     <room>rooms\Nivel_3</room>
+    <room>rooms\Nivel_4</room>
     <room>rooms\Fin</room>
     <room>rooms\Game_Over</room>
   </rooms>
