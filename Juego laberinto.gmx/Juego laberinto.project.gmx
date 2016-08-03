@@ -31,6 +31,14 @@
       <sprite>sprites\sprLife_0</sprite>
     </sprites>
     <sprite>sprites\sprLinea</sprite>
+    <sprite>sprites\sprLlave1</sprite>
+    <sprite>sprites\sprLlave2</sprite>
+    <sprite>sprites\sprLlave3</sprite>
+    <sprite>sprites\sprLlave4</sprite>
+    <sprite>sprites\sprPuerta1</sprite>
+    <sprite>sprites\sprPuerta2</sprite>
+    <sprite>sprites\sprPuerta3</sprite>
+    <sprite>sprites\sprPuerta4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -60,6 +68,16 @@
     <object>objects\objMusica</object>
     <object>objects\objEnemyLevel3</object>
     <object>objects\objLinea</object>
+    <object>objects\objLlave1</object>
+    <object>objects\objLlave2</object>
+    <object>objects\objLlave3</object>
+    <object>objects\objLlave4</object>
+    <object>objects\objPuerta1</object>
+    <object>objects\objPuerta2</object>
+    <object>objects\objPuerta3</object>
+    <object>objects\objPuerta4</object>
+    <object>objects\llaves</object>
+    <object>objects\puertas</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\inicio</room>
@@ -67,6 +85,7 @@
     <room>rooms\Nivel_2</room>
     <room>rooms\Nivel_3</room>
     <room>rooms\Nivel_4</room>
+    <room>rooms\Nivel_5</room>
     <room>rooms\Fin</room>
     <room>rooms\Game_Over</room>
   </rooms>

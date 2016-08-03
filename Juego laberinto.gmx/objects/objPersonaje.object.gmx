@@ -28,6 +28,10 @@
             <string>/// Variables
 velocidad = 8;
 Diamantes = 0;
+llave1 = false;
+llave2 = false;
+llave3 = false;
+llave4 = false;
 
 globalvar Vidas
 
@@ -56,20 +60,19 @@ globalvar Vidas
           <argument>
             <kind>1</kind>
             <string>/// Movimiento
-if(!place_meeting(x-velocidad,y,objMuro)) and (!place_meeting(x-velocidad,y,objPuerta))
-
+if(!place_meeting(x-velocidad,y,objMuro)) and (!place_meeting(x-velocidad,y,objPuerta)) and (!place_meeting(x-velocidad,y,puertas))
 {
     if (keyboard_check(vk_left)){x = x - velocidad}
 }
-if(!place_meeting(x+velocidad,y,objMuro)) and (!place_meeting(x+velocidad,y,objPuerta))
+if(!place_meeting(x+velocidad,y,objMuro)) and (!place_meeting(x+velocidad,y,objPuerta)) and (!place_meeting(x+velocidad,y,puertas))
 {
     if (keyboard_check(vk_right)){x = x + velocidad}
 }
-if(!place_meeting(x,y-velocidad,objMuro)) and (!place_meeting(x,y-velocidad,objPuerta))
+if(!place_meeting(x,y-velocidad,objMuro)) and (!place_meeting(x,y-velocidad,objPuerta)) and (!place_meeting(x,y-velocidad,puertas))
 {
     if (keyboard_check(vk_up)){y = y - velocidad}
 }
-if(!place_meeting(x,y+velocidad,objMuro)) and (!place_meeting(x,y+velocidad,objPuerta))
+if(!place_meeting(x,y+velocidad,objMuro)) and (!place_meeting(x,y+velocidad,objPuerta)) and (!place_meeting(x,y+velocidad,puertas))
 {
     if (keyboard_check(vk_down)){y = y + velocidad}
 }
@@ -142,10 +145,171 @@ globalvar Posy
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (Vidas==0)
+            <string>///vidas
+
+if (Vidas==0)
     {
     room_goto(Game_Over);
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Puertas
+
+if llave1=true
+    {
+    if(place_meeting(x-velocidad,y,objPuerta1))or
+    (place_meeting(x+velocidad,y,objPuerta1))or
+    (place_meeting(x,y-velocidad,objPuerta1))or
+    (place_meeting(x,y+velocidad,objPuerta1))
+        {
+        with(objPuerta1)instance_destroy()
+        }
+    }
+if llave2=true
+    {
+    if(place_meeting(x-velocidad,y,objPuerta2))or
+    (place_meeting(x+velocidad,y,objPuerta2))or
+    (place_meeting(x,y-velocidad,objPuerta2))or
+    (place_meeting(x,y+velocidad,objPuerta2))
+        {
+        with(objPuerta2)instance_destroy()
+        }
+    }
+if llave3=true
+    {
+    if(place_meeting(x-velocidad,y,objPuerta3))or
+    (place_meeting(x+velocidad,y,objPuerta3))or
+    (place_meeting(x,y-velocidad,objPuerta3))or
+    (place_meeting(x,y+velocidad,objPuerta3))
+        {
+        with(objPuerta3)instance_destroy()
+        }
+    }
+if llave4=true
+    {
+    if(place_meeting(x-velocidad,y,objPuerta4))or
+    (place_meeting(x+velocidad,y,objPuerta4))or
+    (place_meeting(x,y-velocidad,objPuerta4))or
+    (place_meeting(x,y+velocidad,objPuerta4))
+        {
+        with(objPuerta4)instance_destroy()
+        }
+    }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objLlave4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>llave4=true;
+with (other) instance_destroy()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objLlave3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>llave3=true;
+with (other) instance_destroy()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objLlave2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>llave2=true;
+with (other) instance_destroy()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objLlave1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>llave1=true;
+with (other) instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -405,6 +569,10 @@ if room == Nivel_3
     }
 if room == Nivel_4
     {
+    room_goto(Nivel_5)
+    }
+if room == Nivel_5
+    {
     room_goto(Fin)
     }
 </string>
@@ -413,6 +581,67 @@ if room == Nivel_4
       </action>
     </event>
     <event eventtype="4" ename="objEnemy3">
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>soundMuerte</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Vidas = Vidas-1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="objEnemy2">
       <action>
         <libid>1</libid>
         <id>211</id>
